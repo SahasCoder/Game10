@@ -1,0 +1,52 @@
+.heading{
+    font-size: 30px !important;
+    width: 100%;
+    margin: 0px;
+    font-weight: bold !important;
+}
+
+.heading h3{
+    display: inline;
+    font-size: 30px !important;
+    font-weight: bold;
+}
+
+.btnIns{
+    float: right;
+    border: 3px white solid !important;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1564669722947-c89159202d19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2xhc3MlMjBiYWxsfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    border-radius: 75px;
+    height: 100px;
+    width: 150px;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+canvas{
+    animation-name: canvas;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-top: 150px;
+}
+@keyframes canvas{
+    from{
+        box-shadow: 2px 2px 50px red;
+    }
+
+    to{
+        box-shadow: 2px 2px 50px blue;
+    }
+}
+
+.mainItems{
+    font-size: 23px !important;
+    font-weight: bold;
+}
