@@ -62,4 +62,13 @@ canvas{
     width: 100%;
     
 }
+    bottom: 0;
+    position: fixed;
+    color: white;
+    font-weight: bold;
+    line-height: 2;
+    background-color: chocolate;
+    width: 100%;
+    
+}
 
