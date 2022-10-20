@@ -1,3 +1,8 @@
+wristX = "";
+wristY = "";
+GameStatus = "";
+scoreRightWrist = "";
+
 function setup(){
     canvas = createCanvas(640 , 500);
     canvas.center();
@@ -13,10 +18,20 @@ function setup(){
 
 function draw(){
     image(video , 0 , 0 , 640 , 500);
+
+    if(GameStatus == "start"){
+        if(scoreRightWrist > 0.2){
+        circle(wristX , wristY , 30);
+        fill("lightgreen");
+        stroke("yellow");
+        }
+    }
 }
 
 function play(){
-    window.alert("Not yet done with start button");
+    GameStatus = "start";
+    console.log("Game Started");
+    document.getElementById("status").innerHTML = "Status: Game Loading....";
 }
 
 function modelLoaded(){
@@ -25,8 +40,10 @@ function modelLoaded(){
 
 function gotPoses(results){
     if(results.length > 0){
-        noseX = results[0].pose.nose.x;
-        noseY = results[0].pose.nose.y;
-        console.log("NoseX: " + noseX + "  NoseY: " + noseY);
+        console.log(results);
+        wristX = results[0].pose.rightWrist.x;
+        wristY = results[0].pose.rightWrist.y;
+        scoreRightWrist = results[0].pose.keypoints[10].score;
+        console.log("WristX: " + wristX + "  WristY: " + wristY);
     }
 }
