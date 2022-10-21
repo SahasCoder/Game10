@@ -31,7 +31,7 @@ function draw(){
 function play(){
     GameStatus = "start";
     console.log("Game Started");
-    document.getElementById("status").innerHTML = "Status: Game Loading....";
+    document.getElementById("status").innerHTML = "Status: Game Loaded";
 }
 
 function modelLoaded(){
